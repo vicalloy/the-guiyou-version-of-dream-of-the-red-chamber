@@ -4,7 +4,7 @@
 
 在线阅读： https://vicalloy.github.io/the-guiyou-version-of-dream-of-the-red-chamber/
 
-下载 PDF/EPUB：
+下载 PDF/EPUB： https://github.com/vicalloy/the-guiyou-version-of-dream-of-the-red-chamber/releases/
 
 ## 编译
 
