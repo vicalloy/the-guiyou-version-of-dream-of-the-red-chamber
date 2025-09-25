@@ -1,0 +1,30 @@
+title: 癸酉本石头记后28回
+description: >
+  陵繁华成一梦，顷刻烟云幻不空。白骨如山忘姓氏，无非公子与红妆。
+mainfont: Songti SC
+sansfont: Heiti SC
+CJKmainfont: Songti SC
+CJKsansfont: Heiti SC
+monofont: Menlo
+documentclass: extarticle
+classoption: 12pt
+geometry:
+  - top=1in
+  - bottom=1in
+  - left=1.25in
+  - right=1.25in
+header-includes: |
+  \usepackage{xeCJK}
+  \usepackage{indentfirst}
+  \usepackage{lipsum}
+  \usepackage{setspace}
+  \usepackage{hyperref}
+  \usepackage{graphicx}
+  \usepackage{afterpage}
+  \XeTeXlinebreaklocale "zh"
+  \XeTeXlinebreakskip=0pt plus 1pt
+  \xeCJKsetup{PunctStyle=quanjiao}
+  \setlength{\parindent}{2em}
+  \fontsize{12}{14}\selectfont
+  \setstretch{2}
+  \hypersetup{bookmarks=true, bookmarksopen=true, bookmarksdepth=2}
