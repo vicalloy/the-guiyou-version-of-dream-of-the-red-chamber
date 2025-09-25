@@ -1,3 +1,55 @@
 .md-content__inner p {
   text-indent: 2em;
 }
+
+p {
+    line-height: 1.8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.8;
+}
+
+body {
+    line-height: 1.8;
+}
+
+p {
+    text-indent: 2em;
+    line-height: 1.8;
+}
+
+p + p {
+    text-indent: 2em;
+}
+
+div > p {
+    text-indent: 2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-indent: 0em !important;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    font-size: 1.4em;
+}
+
+body {
+    font-family: 
+        "PingFang SC",         /* macOS 优选 */
+        "Hiragino Sans GB",    /* macOS 旧版 */
+        "STFangsong",          /* macOS 仿宋（适合正文） */
+        "STSong",              /* macOS 宋体 */
+        "SimSun",              /* Windows 宋体 */
+        "FangSong",            /* Windows 仿宋 */
+        "Microsoft YaHei",     /* Windows 微软雅黑（更现代） */
+        "WenQuanYi Micro Hei", /* Linux 常见 */
+        "Noto Sans CJK SC",    /* Google/Noto 字体，跨平台兼容好 */
+        "AR PL UMing CN",      /* Linux 备用 */
+        "AR PL UMing HK", 
+        "AR PL UMing TW", 
+        "AR PL ShanHeiSun Uni",
+        sans-serif;            /* 最终 fallback */
+    font-size: 1.0em;
+    text-align: justify;
+}

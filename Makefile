@@ -17,6 +17,7 @@ epub:
 	pandoc index.md \
 	-o 癸酉本石头记后28回.epub \
 	--epub-title-page=false \
+	--css=docs/css/custom.css \
 	--epub-cover-image=docs/assets/cover.jpg \
 	--toc -V toc-title="目录"
 
