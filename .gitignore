@@ -2,3 +2,4 @@
 site/
 *.epub
 *.pdf
+/index.md

@@ -1,3 +1,4 @@
+import argparse
 from pathlib import Path
 
 files = [
@@ -37,7 +38,7 @@ files = [
 output_file = 'index.md'
 
 
-def get_content(fn: str) -> str:
+def get_content(fn: str, clear_page=True) -> str:
     fn = f"docs/{fn}"
     stem = Path(fn).stem
     j = abs(hash(fn))
@@ -49,25 +50,38 @@ def get_content(fn: str) -> str:
             content = f"# {stem}\n\n{content}"
         for i in range(1, 5):
           content = content.replace(f"[^{i}]", f"[^{j}.{i}]")
+        if not clear_page:
+            return content
         return f"""\clearpage
 
 {content}
 """
 
-def merge():
+def merge(fmt: str):
     """
     生成目录并合并内容
-    :return:
     """
     content: list[str] = []
     with open("metadata.yaml", 'r', encoding='utf-8') as f:
         content.append(f"---\n{f.read()}\n---")
-    for filename in files:
+    first_file = files[0]
+    clear_page = False
+    if fmt == 'pdf':
+        clear_page = True
+    content.append(get_content(first_file, clear_page=clear_page))
+    for filename in files[1:]:
         content.append(get_content(filename))
     return '\n\n'.join(content)
 
+def main():
+    parser = argparse.ArgumentParser(description="合并内容并输出为指定格式")
+    parser.add_argument('--fmt', choices=['pdf', 'epub'], default='pdf', help='输出格式')
+    args = parser.parse_args()
+    fmt = args.fmt
+    with open(output_file, 'w', encoding='utf-8') as f:
+        f.write(merge(fmt))
+    print(f"✅ 已成功合并为 {output_file}")
+
 # 执行合并
 if __name__ == '__main__':
-    with open(output_file, 'w', encoding='utf-8') as f:
-        f.write(merge())
-    print(f"✅ 已成功合并为 {output_file}")
+    main()

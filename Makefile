@@ -4,17 +4,16 @@ serve:
 html:
 	mkdocs build
 
-merge-md:
-	python merge-md.py
-
-pdf: merge-md
+pdf:
+	python merge-md.py --fmt=pdf
 	pandoc index.md \
 	-o 癸酉本石头记后28回.pdf \
 	--toc -V toc-title="目录" \
 	--include-before-body=cover.tex \
 	--pdf-engine=xelatex
 
-epub: merge-md
+epub:
+	python merge-md.py --fmt=epub
 	pandoc index.md \
 	-o 癸酉本石头记后28回.epub \
 	--epub-title-page=false \

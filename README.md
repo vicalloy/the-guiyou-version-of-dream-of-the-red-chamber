@@ -2,7 +2,7 @@
 
 本项目基于 [mkdocs](https://www.mkdocs.org/) 和 [pandoc](https://pandoc.org/) 构建，内容为《红楼梦》“癸酉本”后28回的电子版。
 
-在线阅读：
+在线阅读： https://vicalloy.github.io/the-guiyou-version-of-dream-of-the-red-chamber/
 
 下载 PDF/EPUB：
 
