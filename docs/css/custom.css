@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    font-family: 
+    font-family:
         "PingFang SC",         /* macOS 优选 */
         "Hiragino Sans GB",    /* macOS 旧版 */
         "STFangsong",          /* macOS 仿宋（适合正文） */
@@ -46,8 +46,8 @@ body {
         "WenQuanYi Micro Hei", /* Linux 常见 */
         "Noto Sans CJK SC",    /* Google/Noto 字体，跨平台兼容好 */
         "AR PL UMing CN",      /* Linux 备用 */
-        "AR PL UMing HK", 
-        "AR PL UMing TW", 
+        "AR PL UMing HK",
+        "AR PL UMing TW",
         "AR PL ShanHeiSun Uni",
         sans-serif;            /* 最终 fallback */
     font-size: 1.0em;
