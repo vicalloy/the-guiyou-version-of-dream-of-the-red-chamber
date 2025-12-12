@@ -61,3 +61,5 @@ nav:
 
 markdown_extensions:
   - footnotes
+# extra_javascript:
+#   - extra.js
